@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<title>Função</title>
+
+<h3>Álcool ou Gasolina?</h3>
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+
+    }
+    
+    function divide(numero1, numero2) {
+        return numero1 / numero2;
+    }
+    
+    function mostra(msg) {
+        document.write(msg);
+        pulaLinha();
+    }
+
+    var tanque = 40;
+    var caminhoComGasolina = 480;
+    var caminhoComAlcool = 300;
+
+    mostra(`O consumo de gasolina é ${divide(caminhoComGasolina, tanque)} km/L`);
+    
+    mostra(`O consumo de álcool é ${divide(caminhoComAlcool, tanque)} km/L`);
+    
+</script>

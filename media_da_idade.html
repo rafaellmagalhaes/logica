@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var quantidadesDePessoas = parseInt(prompt("Digite a quantidade de pessoas:"));
+
+    var quantidade = 0;
+    var totalDeIdade = 0;
+
+    while(quantidade < quantidadesDePessoas) {
+
+        var idade = parseInt(prompt("Digite a idade:"));
+        var totalDeIdade = totalDeIdade + idade;
+        quantidade++
+    }
+    var mediaDeIdade = totalDeIdade / quantidadesDePessoas
+    mostra(`A média de idade é ${Math.round (mediaDeIdade)} anos.`);
+
+</script>

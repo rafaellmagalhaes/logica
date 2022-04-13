@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra (frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroDigitado = parseInt(prompt("Digite um número:"))
+
+    for(var numero = 1; numero <= 10; numero++) {
+
+        mostra(`${ numeroDigitado * numero}`)
+    }
+
+</script>

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+    
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase){
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function divide(idade1, idade2){
+
+        return idade1 - idade2; 
+    }
+
+    var minhaIdade = 15
+    var idadeIrmao = 13
+
+    mostra(`Nossa diferença de idade é ${divide(minhaIdade, idadeIrmao)} anos`);
+
+
+</script>

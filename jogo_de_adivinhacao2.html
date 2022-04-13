@@ -1,0 +1,78 @@
+<meta charset="UTF-8">
+
+<input type="number">
+<button>Compare com o número</button>
+
+<script>
+    
+    function sorteiNumero() {
+
+        return Math.round(Math.random() * 10);
+    }
+
+    function gerandoListaDeNumero(quantidade) {
+
+        var segredos = [];
+        var numero = 1;
+
+        while(numero <= quantidade) {
+
+            var numeroSorteado = sorteiNumero();
+
+            if(numeroSorteado != 0) {
+
+                var achouNumero = false;
+
+                for(var index = 0; index < segredos.length;  index++) {
+
+                    if(segredos[index] == numeroSorteado) {
+
+                        achouNumero = true;
+                        break;
+                    }
+                }  
+
+                if(achouNumero == false) {
+                    
+                    segredos.push(numeroSorteado);
+                    numero++;
+                }
+            }
+               
+        }
+
+        return segredos;
+    }
+    
+    var segredos = gerandoListaDeNumero(5);
+    console.log(segredos);
+    var input = document.querySelector("input");
+    input.focus();
+
+    function validador() {
+
+        var achou = false
+
+       for(var index = 0; index < segredos.length; index++) {
+
+            if(input.value == segredos[index]) {
+
+                alert("Você ACERTOU!!!");
+                var achou = true;
+                break
+            }
+       }
+
+       if(achou == false) {
+
+            alert("Você ERROU!!!!");
+        }
+
+       input.value = "";
+       input.focus();
+    }
+
+    var button = document.querySelector("button")
+    button.onclick = validador;
+
+</script>

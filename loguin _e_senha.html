@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    
+    var tentativa = 3;
+
+    while(tentativa != 0) {
+    
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+            alert("Bem-vindo ao sistema " + loginInformado);
+            break;
+        } 
+
+        else {
+
+            alert("Login inválido. Tente novamente");
+            tentativa = tentativa - 1;
+
+            if(tentativa == 0) {
+
+                document.write("Sua conta está bloqueada!");
+            }
+        }
+    }
+
+</script>

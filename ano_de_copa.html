@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var primeiraCopa = parseInt(prompt('Digite o ano'));
+
+    while(primeiraCopa <= 2022) {
+
+        mostra(`${primeiraCopa} teve copa.`);
+        primeiraCopa = primeiraCopa + 4;
+    }
+       
+</script>
